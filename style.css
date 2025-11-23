@@ -1,0 +1,54 @@
+/* small custom styles and animations */
+
+:root {
+  --glass: rgba(255, 255, 255, 0.6);
+}
+
+/* enable smooth transitions for dark mode */
+* {
+  transition: background-color 0.25s ease, color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Product cards: subtle hover / lift + shadow + shine */
+.product-card {
+  will-change: transform;
+  transform-origin: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a subtle floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.product-card:hover {
+  animation: float 800ms ease-in-out forwards;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.15);
+}
+
+/* tiny badge style */
+.product-card .badge {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* respect dark mode for body background when .dark is set on root */
+.dark body,
+.dark .dark\:bg-gray-900 {
+  background-color: #0b1220;
+}
