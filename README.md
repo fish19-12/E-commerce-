@@ -21,7 +21,7 @@ A modern, responsive e-commerce website built with HTML, Tailwind CSS, and JavaS
  🚀 Live Demo
 
 Check out the live version of my website 
-🌐 Live Demo : e-commerce-lilac-phi-17.vercel.app 
+🌐 Live Demo : https://e-commerce-lilac-phi-17.vercel.app/
 
 💻 Installation
 
